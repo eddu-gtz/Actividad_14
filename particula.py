@@ -17,14 +17,10 @@ class Particula:
     def __str__(self):
         return (
             'Id: ' + str(self.__id) + '\n' +
-            'Origen X: ' + str(self.__origen_x) + '\n' +
-            'Origen Y: ' + str(self.__origen_y) + '\n' +
-            'Destino X: ' + str(self.__destino_x) + '\n' +
-            'Destino Y: ' + str(self.__destino_y) + '\n' +
+            'Origen: (' + str(self.__origen_x) +', '+ str(self.__origen_y) + ')\n' +
+            'Destino: (' + str(self.__destino_x)  +', '+ str(self.__destino_y) + ')\n' +
             'Velocidad: ' + str(self.__velocidad) + '\n' +
-            'Red: ' + str(self.__red) + '\n' +
-            'Green: ' + str(self.__green) + '\n' +
-            'Blue: ' + str(self.__blue) + '\n' +
+            'Color: (' + str(self.__red) +', '+ str(self.__green) +', '+ str(self.__blue) +')\n' +
             'Distancia: ' + str(self.__distancia) + '\n' 
         )
     

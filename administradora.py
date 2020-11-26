@@ -1,19 +1,44 @@
 from particula import Particula
+from pprint import pprint, pformat
 import json
 
 class Administradora:
     def __init__(self):
         self.__particulas = []
+        self.__grafo = dict()
 
     def agregar_inicio(self, particula:Particula):
         self.__particulas.insert(0, particula)
+        self.agregar_grafo(particula)
 
     def agregar_final(self, particula:Particula):
         self.__particulas.append(particula)
+        self.agregar_grafo(particula)
+        
+    def agregar_grafo(self, particula:Particula):
+        origen = (particula.origen_x, particula.origen_y)
+        destino = (particula.destino_x, particula.destino_y)
+
+        arista_o_d = ( destino, particula.distancia)
+        arista_d_o = ( origen, particula.distancia)
+
+        if origen in self.__grafo:
+            self.__grafo[origen].append(arista_o_d)
+        else:
+            self.__grafo[origen] = [arista_o_d]
+
+        if destino in self.__grafo:
+            self.__grafo[destino].append(arista_d_o)
+        else:
+            self.__grafo[destino] = [arista_d_o]
 
     def mostrar(self):
-        for particula in self.__particulas:
-            print(particula)
+        #for particula in self.__particulas:
+        #    print(particula)
+
+        string = pformat(self.__grafo, width=60, indent=1)
+        return string
+        
 
     def __str__(self):
         #join recibe n cantidad de elementos para meter a ese string
@@ -35,8 +60,14 @@ class Administradora:
         try:
             with open(ubicacion, 'r') as archivo:
                 lista = json.load(archivo)
-                #Los dos asteriscos los comvierte los datos json a parametros
+                #self.__grafo = json.load(archivo)
+                #Los dos asteriscos los convierte los datos json a parametros
                 self.__particulas = [Particula(**particula) for particula in lista]
+
+                for particula in self.__particulas:
+                    self.agregar_grafo(particula)
+
+
             return 1
         except:
             return 0
@@ -70,4 +101,6 @@ class Administradora:
     
     def sort_by_velocidad(self):
         self.__particulas.sort(key=lambda particula: particula.velocidad)
+
+    
         

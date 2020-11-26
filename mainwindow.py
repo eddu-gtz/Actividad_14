@@ -44,6 +44,8 @@ class MainWindow(QMainWindow):
         self.ui.actionOrdenar_id.triggered.connect(self.action_ordenar_id)
         self.ui.actionOrdenar_distancia.triggered.connect(self.action_ordenar_distancia)
         self.ui.actionOrdenar_velocidad.triggered.connect(self.action_ordenar_velocidad)
+        #Configuracion del menu - Ver
+        self.ui.actionGrafo.triggered.connect(self.action_grafo)
         
 
     @Slot()
@@ -51,6 +53,7 @@ class MainWindow(QMainWindow):
         #Limpia el PlainText y despues inserta los datos
         self.ui.salida.clear()
         self.ui.salida.insertPlainText(str(self.administrador))
+        
     
     @Slot()
     def click_agregar_final(self):
@@ -264,3 +267,9 @@ class MainWindow(QMainWindow):
     @Slot()
     def action_ordenar_velocidad(self):
         self.administrador.sort_by_velocidad()
+
+    @Slot()
+    def action_grafo(self):
+        #Limpia el PlainText y despues inserta los datos
+        self.ui.salida.clear()
+        self.ui.salida.insertPlainText(self.administrador.mostrar())

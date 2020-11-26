@@ -17,7 +17,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(792, 559)
+        MainWindow.resize(799, 551)
         self.actionAbrir = QAction(MainWindow)
         self.actionAbrir.setObjectName(u"actionAbrir")
         self.actionGuardar = QAction(MainWindow)
@@ -28,6 +28,8 @@ class Ui_MainWindow(object):
         self.actionOrdenar_distancia.setObjectName(u"actionOrdenar_distancia")
         self.actionOrdenar_velocidad = QAction(MainWindow)
         self.actionOrdenar_velocidad.setObjectName(u"actionOrdenar_velocidad")
+        self.actionGrafo = QAction(MainWindow)
+        self.actionGrafo.setObjectName(u"actionGrafo")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_3 = QGridLayout(self.centralwidget)
@@ -42,118 +44,6 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName(u"groupBox")
         self.gridLayout = QGridLayout(self.groupBox)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.red_spinBox = QSpinBox(self.groupBox)
-        self.red_spinBox.setObjectName(u"red_spinBox")
-        self.red_spinBox.setMinimumSize(QSize(90, 0))
-        self.red_spinBox.setMaximum(255)
-
-        self.gridLayout.addWidget(self.red_spinBox, 7, 2, 1, 1)
-
-        self.line_2 = QFrame(self.groupBox)
-        self.line_2.setObjectName(u"line_2")
-        self.line_2.setFrameShape(QFrame.HLine)
-        self.line_2.setFrameShadow(QFrame.Sunken)
-
-        self.gridLayout.addWidget(self.line_2, 10, 0, 1, 3)
-
-        self.green_spinBox = QSpinBox(self.groupBox)
-        self.green_spinBox.setObjectName(u"green_spinBox")
-        self.green_spinBox.setMinimumSize(QSize(90, 0))
-        self.green_spinBox.setMaximum(255)
-
-        self.gridLayout.addWidget(self.green_spinBox, 8, 2, 1, 1)
-
-        self.destino_y_spinBox = QSpinBox(self.groupBox)
-        self.destino_y_spinBox.setObjectName(u"destino_y_spinBox")
-        self.destino_y_spinBox.setMaximum(500)
-
-        self.gridLayout.addWidget(self.destino_y_spinBox, 4, 1, 1, 2)
-
-        self.origen_x_spinBox = QSpinBox(self.groupBox)
-        self.origen_x_spinBox.setObjectName(u"origen_x_spinBox")
-        self.origen_x_spinBox.setMaximum(500)
-
-        self.gridLayout.addWidget(self.origen_x_spinBox, 1, 1, 1, 2)
-
-        self.label_6 = QLabel(self.groupBox)
-        self.label_6.setObjectName(u"label_6")
-        font = QFont()
-        font.setPointSize(10)
-        self.label_6.setFont(font)
-
-        self.gridLayout.addWidget(self.label_6, 5, 0, 1, 1)
-
-        self.label_3 = QLabel(self.groupBox)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setFont(font)
-
-        self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
-
-        self.label_4 = QLabel(self.groupBox)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setFont(font)
-
-        self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
-
-        self.label_8 = QLabel(self.groupBox)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setFont(font)
-
-        self.gridLayout.addWidget(self.label_8, 7, 0, 1, 1)
-
-        self.destino_x_spinBox = QSpinBox(self.groupBox)
-        self.destino_x_spinBox.setObjectName(u"destino_x_spinBox")
-        self.destino_x_spinBox.setMaximum(500)
-
-        self.gridLayout.addWidget(self.destino_x_spinBox, 3, 1, 1, 2)
-
-        self.label_9 = QLabel(self.groupBox)
-        self.label_9.setObjectName(u"label_9")
-
-        self.gridLayout.addWidget(self.label_9, 8, 1, 1, 1)
-
-        self.label_10 = QLabel(self.groupBox)
-        self.label_10.setObjectName(u"label_10")
-
-        self.gridLayout.addWidget(self.label_10, 9, 1, 1, 1)
-
-        self.label_2 = QLabel(self.groupBox)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font)
-
-        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-
-        self.agregar_final_pushButton = QPushButton(self.groupBox)
-        self.agregar_final_pushButton.setObjectName(u"agregar_final_pushButton")
-        self.agregar_final_pushButton.setMinimumSize(QSize(200, 0))
-        self.agregar_final_pushButton.setFont(font)
-        self.agregar_final_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.agregar_final_pushButton.setAutoFillBackground(False)
-        self.agregar_final_pushButton.setFlat(False)
-
-        self.gridLayout.addWidget(self.agregar_final_pushButton, 11, 0, 1, 3)
-
-        self.label_5 = QLabel(self.groupBox)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font)
-
-        self.gridLayout.addWidget(self.label_5, 4, 0, 1, 1)
-
-        self.mostrar_pushButton = QPushButton(self.groupBox)
-        self.mostrar_pushButton.setObjectName(u"mostrar_pushButton")
-        self.mostrar_pushButton.setMinimumSize(QSize(200, 0))
-        self.mostrar_pushButton.setFont(font)
-        self.mostrar_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-
-        self.gridLayout.addWidget(self.mostrar_pushButton, 13, 0, 1, 3)
-
-        self.line = QFrame(self.groupBox)
-        self.line.setObjectName(u"line")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
-
-        self.gridLayout.addWidget(self.line, 6, 0, 1, 3)
-
         self.id_spinBox = QSpinBox(self.groupBox)
         self.id_spinBox.setObjectName(u"id_spinBox")
         self.id_spinBox.setButtonSymbols(QAbstractSpinBox.NoButtons)
@@ -165,37 +55,178 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.id_spinBox, 0, 1, 1, 2)
 
+        self.agregar_inicio_pushButton = QPushButton(self.groupBox)
+        self.agregar_inicio_pushButton.setObjectName(u"agregar_inicio_pushButton")
+        self.agregar_inicio_pushButton.setMinimumSize(QSize(200, 0))
+        font = QFont()
+        font.setPointSize(10)
+        self.agregar_inicio_pushButton.setFont(font)
+        self.agregar_inicio_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.gridLayout.addWidget(self.agregar_inicio_pushButton, 9, 0, 1, 3)
+
+        self.agregar_final_pushButton = QPushButton(self.groupBox)
+        self.agregar_final_pushButton.setObjectName(u"agregar_final_pushButton")
+        self.agregar_final_pushButton.setMinimumSize(QSize(200, 0))
+        self.agregar_final_pushButton.setFont(font)
+        self.agregar_final_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.agregar_final_pushButton.setAutoFillBackground(False)
+        self.agregar_final_pushButton.setFlat(False)
+
+        self.gridLayout.addWidget(self.agregar_final_pushButton, 8, 0, 1, 3)
+
+        self.salida = QPlainTextEdit(self.groupBox)
+        self.salida.setObjectName(u"salida")
+        self.salida.setFont(font)
+
+        self.gridLayout.addWidget(self.salida, 0, 3, 11, 1)
+
+        self.groupBox_3 = QGroupBox(self.groupBox)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.gridLayout_7 = QGridLayout(self.groupBox_3)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.label_4 = QLabel(self.groupBox_3)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMaximumSize(QSize(25, 16777215))
+        self.label_4.setFont(font)
+        self.label_4.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.label_4, 0, 0, 1, 1)
+
+        self.destino_y_spinBox = QSpinBox(self.groupBox_3)
+        self.destino_y_spinBox.setObjectName(u"destino_y_spinBox")
+        self.destino_y_spinBox.setMaximum(500)
+
+        self.gridLayout_7.addWidget(self.destino_y_spinBox, 0, 3, 1, 1)
+
+        self.destino_x_spinBox = QSpinBox(self.groupBox_3)
+        self.destino_x_spinBox.setObjectName(u"destino_x_spinBox")
+        self.destino_x_spinBox.setMaximum(500)
+
+        self.gridLayout_7.addWidget(self.destino_x_spinBox, 0, 1, 1, 1)
+
+        self.label_5 = QLabel(self.groupBox_3)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(25, 16777215))
+        self.label_5.setFont(font)
+        self.label_5.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.label_5, 0, 2, 1, 1)
+
+
+        self.gridLayout.addWidget(self.groupBox_3, 2, 0, 2, 3)
+
+        self.groupBox_2 = QGroupBox(self.groupBox)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.groupBox_2.setMinimumSize(QSize(250, 0))
+        self.gridLayout_6 = QGridLayout(self.groupBox_2)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.label_2 = QLabel(self.groupBox_2)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(25, 16777215))
+        font1 = QFont()
+        font1.setPointSize(10)
+        font1.setBold(False)
+        font1.setWeight(50)
+        self.label_2.setFont(font1)
+        self.label_2.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_6.addWidget(self.label_2, 0, 0, 1, 1)
+
+        self.origen_x_spinBox = QSpinBox(self.groupBox_2)
+        self.origen_x_spinBox.setObjectName(u"origen_x_spinBox")
+        self.origen_x_spinBox.setMaximum(500)
+
+        self.gridLayout_6.addWidget(self.origen_x_spinBox, 0, 1, 1, 1)
+
+        self.origen_y_spinBox = QSpinBox(self.groupBox_2)
+        self.origen_y_spinBox.setObjectName(u"origen_y_spinBox")
+        self.origen_y_spinBox.setMaximum(500)
+
+        self.gridLayout_6.addWidget(self.origen_y_spinBox, 0, 3, 1, 1)
+
+        self.label_3 = QLabel(self.groupBox_2)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMaximumSize(QSize(25, 16777215))
+        self.label_3.setFont(font)
+        self.label_3.setLayoutDirection(Qt.LeftToRight)
+        self.label_3.setAutoFillBackground(False)
+        self.label_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_6.addWidget(self.label_3, 0, 2, 1, 1)
+
+
+        self.gridLayout.addWidget(self.groupBox_2, 1, 0, 1, 3)
+
+        self.mostrar_pushButton = QPushButton(self.groupBox)
+        self.mostrar_pushButton.setObjectName(u"mostrar_pushButton")
+        self.mostrar_pushButton.setMinimumSize(QSize(200, 0))
+        self.mostrar_pushButton.setFont(font)
+        self.mostrar_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.gridLayout.addWidget(self.mostrar_pushButton, 10, 0, 1, 3)
+
         self.label = QLabel(self.groupBox)
         self.label.setObjectName(u"label")
         self.label.setFont(font)
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.origen_y_spinBox = QSpinBox(self.groupBox)
-        self.origen_y_spinBox.setObjectName(u"origen_y_spinBox")
-        self.origen_y_spinBox.setMaximum(500)
+        self.line_2 = QFrame(self.groupBox)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setFrameShape(QFrame.HLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
 
-        self.gridLayout.addWidget(self.origen_y_spinBox, 2, 1, 1, 2)
+        self.gridLayout.addWidget(self.line_2, 7, 0, 1, 3)
 
-        self.label_7 = QLabel(self.groupBox)
+        self.groupBox_4 = QGroupBox(self.groupBox)
+        self.groupBox_4.setObjectName(u"groupBox_4")
+        self.gridLayout_8 = QGridLayout(self.groupBox_4)
+        self.gridLayout_8.setObjectName(u"gridLayout_8")
+        self.label_7 = QLabel(self.groupBox_4)
         self.label_7.setObjectName(u"label_7")
 
-        self.gridLayout.addWidget(self.label_7, 7, 1, 1, 1)
+        self.gridLayout_8.addWidget(self.label_7, 0, 0, 1, 1)
 
-        self.blue_spinBox = QSpinBox(self.groupBox)
+        self.red_spinBox = QSpinBox(self.groupBox_4)
+        self.red_spinBox.setObjectName(u"red_spinBox")
+        self.red_spinBox.setMinimumSize(QSize(90, 0))
+        self.red_spinBox.setMaximum(255)
+
+        self.gridLayout_8.addWidget(self.red_spinBox, 0, 1, 1, 1)
+
+        self.label_9 = QLabel(self.groupBox_4)
+        self.label_9.setObjectName(u"label_9")
+
+        self.gridLayout_8.addWidget(self.label_9, 1, 0, 1, 1)
+
+        self.green_spinBox = QSpinBox(self.groupBox_4)
+        self.green_spinBox.setObjectName(u"green_spinBox")
+        self.green_spinBox.setMinimumSize(QSize(90, 0))
+        self.green_spinBox.setMaximum(255)
+
+        self.gridLayout_8.addWidget(self.green_spinBox, 1, 1, 1, 1)
+
+        self.label_10 = QLabel(self.groupBox_4)
+        self.label_10.setObjectName(u"label_10")
+
+        self.gridLayout_8.addWidget(self.label_10, 2, 0, 1, 1)
+
+        self.blue_spinBox = QSpinBox(self.groupBox_4)
         self.blue_spinBox.setObjectName(u"blue_spinBox")
         self.blue_spinBox.setMinimumSize(QSize(90, 0))
         self.blue_spinBox.setMaximum(255)
 
-        self.gridLayout.addWidget(self.blue_spinBox, 9, 2, 1, 1)
+        self.gridLayout_8.addWidget(self.blue_spinBox, 2, 1, 1, 1)
 
-        self.agregar_inicio_pushButton = QPushButton(self.groupBox)
-        self.agregar_inicio_pushButton.setObjectName(u"agregar_inicio_pushButton")
-        self.agregar_inicio_pushButton.setMinimumSize(QSize(200, 0))
-        self.agregar_inicio_pushButton.setFont(font)
-        self.agregar_inicio_pushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.gridLayout.addWidget(self.agregar_inicio_pushButton, 12, 0, 1, 3)
+        self.gridLayout.addWidget(self.groupBox_4, 6, 0, 1, 3)
+
+        self.label_6 = QLabel(self.groupBox)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font)
+
+        self.gridLayout.addWidget(self.label_6, 4, 0, 1, 1)
 
         self.velocidad_spinBox = QSpinBox(self.groupBox)
         self.velocidad_spinBox.setObjectName(u"velocidad_spinBox")
@@ -203,13 +234,7 @@ class Ui_MainWindow(object):
         self.velocidad_spinBox.setMinimum(-5000)
         self.velocidad_spinBox.setMaximum(5000)
 
-        self.gridLayout.addWidget(self.velocidad_spinBox, 5, 1, 1, 2)
-
-        self.salida = QPlainTextEdit(self.groupBox)
-        self.salida.setObjectName(u"salida")
-        self.salida.setFont(font)
-
-        self.gridLayout.addWidget(self.salida, 0, 3, 14, 1)
+        self.gridLayout.addWidget(self.velocidad_spinBox, 4, 1, 1, 2)
 
 
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -273,11 +298,13 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 792, 21))
+        self.menubar.setGeometry(QRect(0, 0, 799, 21))
         self.menuAbrir = QMenu(self.menubar)
         self.menuAbrir.setObjectName(u"menuAbrir")
         self.menuOrdenar = QMenu(self.menubar)
         self.menuOrdenar.setObjectName(u"menuOrdenar")
+        self.menuGrafo = QMenu(self.menubar)
+        self.menuGrafo.setObjectName(u"menuGrafo")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -285,11 +312,13 @@ class Ui_MainWindow(object):
 
         self.menubar.addAction(self.menuAbrir.menuAction())
         self.menubar.addAction(self.menuOrdenar.menuAction())
+        self.menubar.addAction(self.menuGrafo.menuAction())
         self.menuAbrir.addAction(self.actionAbrir)
         self.menuAbrir.addAction(self.actionGuardar)
         self.menuOrdenar.addAction(self.actionOrdenar_id)
         self.menuOrdenar.addAction(self.actionOrdenar_distancia)
         self.menuOrdenar.addAction(self.actionOrdenar_velocidad)
+        self.menuGrafo.addAction(self.actionGrafo)
 
         self.retranslateUi(MainWindow)
 
@@ -313,20 +342,26 @@ class Ui_MainWindow(object):
         self.actionOrdenar_id.setText(QCoreApplication.translate("MainWindow", u"Por id - ascendente", None))
         self.actionOrdenar_distancia.setText(QCoreApplication.translate("MainWindow", u"Por distancia - descendente", None))
         self.actionOrdenar_velocidad.setText(QCoreApplication.translate("MainWindow", u"Por velocidad - ascendente", None))
+        self.actionGrafo.setText(QCoreApplication.translate("MainWindow", u"Grafo", None))
+#if QT_CONFIG(shortcut)
+        self.actionGrafo.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+G", None))
+#endif // QT_CONFIG(shortcut)
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Particula", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Velocidad", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Origen en Y", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Destino X", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Color (RGB):", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Green", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Blue", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Origen en X", None))
+        self.agregar_inicio_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar al inicio", None))
         self.agregar_final_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar al final", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Destino Y", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Destino", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"X:", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Y:", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Origen", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"X:", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Y:", None))
         self.mostrar_pushButton.setText(QCoreApplication.translate("MainWindow", u"Mostrar", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Id", None))
+        self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Color (RGB):", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Red", None))
-        self.agregar_inicio_pushButton.setText(QCoreApplication.translate("MainWindow", u"Agregar al inicio", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Green", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Blue", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Velocidad", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Agregar", None))
         self.search_id_lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Buscar por ID de la particula", None))
         self.search_pushButton.setText(QCoreApplication.translate("MainWindow", u"Buscar", None))
@@ -337,5 +372,6 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Dibujo", None))
         self.menuAbrir.setTitle(QCoreApplication.translate("MainWindow", u"Archivo", None))
         self.menuOrdenar.setTitle(QCoreApplication.translate("MainWindow", u"Ordenar", None))
+        self.menuGrafo.setTitle(QCoreApplication.translate("MainWindow", u"Ver", None))
     # retranslateUi
 
